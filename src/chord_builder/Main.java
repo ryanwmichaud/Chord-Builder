@@ -35,6 +35,16 @@ public class Main {
 		sts.add(fourthSt);	
 		
 		
-		printSts(sts);
+		ArrayList<String> notes = new ArrayList<String>();
+		notes.add("C");
+		notes.add("E");
+		notes.add("G");
+		for (String note: notes) {
+			System.out.println(note);
+			for(St s:sts) {
+				System.out.println(s.getFretAnyOct(note));
+			}
+		}
+		
 		}
 }
