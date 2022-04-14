@@ -115,6 +115,22 @@ public ArrayList<Integer> getFretAnyOct(String n) throws NullPointerException {
 		}
 		return frets;
 	}
+public ArrayList<Integer> getLocally(String n,int start) throws NullPointerException {
+	//this can be super improved
+		ArrayList<Integer> frets = new ArrayList<Integer>();
+			for(int i = 0; i<10;i++) {
+				String note = n+String.valueOf(i);
+				
+				if(map.containsKey(note)){
+					int dif = map.get(note);
+					if(dif-start>=0 && dif-start<4) {
+						frets.add(dif);
+					}
+				}
+				
+			}
+			return frets;
+		}
 	
 }
 	
